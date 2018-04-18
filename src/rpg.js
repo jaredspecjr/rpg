@@ -44,6 +44,8 @@ export class Enemy {
   enemyDamage(player){
     if (this.enemyClass === "weak"){
       player.health -= 5;
+    } else if (this.enemyClass === "strong"){
+      player.health -=10;
     }
   }
 }
