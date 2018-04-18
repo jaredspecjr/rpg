@@ -27,6 +27,13 @@ export class Player{
       enemy.health -=5;
     }
   }
+  endGameCheck(){
+    if(this.health > 0){
+      return false;
+    } else if(this.health <= 0){
+      return true;
+    }
+  }
 }
 
 export class Enemy {
