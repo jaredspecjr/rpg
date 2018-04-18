@@ -25,7 +25,7 @@ describe('Player' , function(){
    it('should take health away from the player', function(){
      let player1 = new Player("dude", "warrior");
      let enemyWeak = new Enemy("weak");
-     enemyWeak.enemyDamage();
+     enemyWeak.enemyDamage(player1);
      expect(player1.health).toEqual(95);
    });
  })
