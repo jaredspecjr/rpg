@@ -21,7 +21,7 @@ describe('Player' , function(){
     expect(player2.tal).toEqual(20);
   });
   it('should check stats and then damage enemy', function(){
-    let player1 = new Player("jared", "wizard");
+    let player1 = new Player("jared", "warrior");
     let enemyWeak = new Enemy("weak");
     player1.classCheck();
     player1.playerDamage(enemyWeak);
