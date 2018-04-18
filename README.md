@@ -1,8 +1,8 @@
 ##Specs
 
 | spec |  input |  output |
-|create a character| wizard | wizard with certain stats|
-|create npc monster to fight | attack | remove health from monster |
+| create a character| wizard | wizard with certain stats|
+| create npc monster to fight | attack | remove health from monster |
 | monster to attack after you attack | end turn of your attack | monster attacks|
 | make check to determine how much damage is done | str = 20 | attack is now 35 |
 | make button that continues game | on click | new room or fight|

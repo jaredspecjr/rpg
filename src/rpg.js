@@ -7,6 +7,7 @@ export class Player{
     this.dex = 10;
     this.int = 10;
     this.tal = 10;
+
   }
   classCheck(){
     if (this.playerClass === "warrior"){
@@ -17,6 +18,18 @@ export class Player{
       this.dex += 10;
     } else if (this.playerClass === "bard"){
       this.tal += 10;
+    }
+  }
+}
+
+export class Enemy {
+  constructor(enemyClass){
+    this.enemyClass = enemyClass;
+    this.health = 100;
+  }
+  enemyDamage(){
+    if (this.enemyClass === "weak" ){
+      this.health -= 5;
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Player } from './../src/rpg.js';
+import { Enemy } from './../src/rpg.js';
 
 describe('Player' , function(){
 
@@ -20,3 +21,11 @@ describe('Player' , function(){
     expect(player2.tal).toEqual(20);
   });
 });
+ describe('Enemy' , function(){
+   it('should take health away from the player', function(){
+     let player1 = new Player("dude", "warrior");
+     let enemyWeak = new Enemy("weak");
+     enemyWeak.enemyDamage();
+     expect(player1.health).toEqual(95);
+   });
+ })
