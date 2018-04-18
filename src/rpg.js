@@ -8,9 +8,15 @@ export class Player{
     this.int = 10;
     this.tal = 10;
   }
-  warStatCheck(){
+  classCheck(){
     if (this.playerClass === "warrior"){
       this.str += 10;
+    } else if (this.playerClass === "wizard"){
+      this.int += 10;
+    } else if (this.playerClass === "thief"){
+      this.dex += 10;
+    } else if (this.playerClass === "bard"){
+      this.tal += 10;
     }
   }
 }

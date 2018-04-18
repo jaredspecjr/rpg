@@ -13,7 +13,7 @@
 ## classes
 wizard
 warrior
-theif
+thief
 bard
 
 ## stats
