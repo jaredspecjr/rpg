@@ -17,6 +17,6 @@ describe('Player' , function(){
   it('should check if the players is a warrior and apply new stats', function() {
     let player2 = new Player("sally", "bard");
     player2.classCheck();
-    expect(player2.tal).toEqual(25);
+    expect(player2.tal).toEqual(20);
   });
 });
