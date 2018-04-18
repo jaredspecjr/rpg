@@ -20,6 +20,13 @@ export class Player{
       this.tal += 10;
     }
   }
+  playerDamage(enemy){
+    if(this.str > 19){
+      enemy.health -= 10;
+    } else {
+      enemy.health -=5;
+    }
+  }
 }
 
 export class Enemy {
@@ -33,3 +40,7 @@ export class Enemy {
     }
   }
 }
+
+// export class Endgame {
+//   constructor()
+// }

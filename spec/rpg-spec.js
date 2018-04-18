@@ -20,6 +20,13 @@ describe('Player' , function(){
     player2.classCheck();
     expect(player2.tal).toEqual(20);
   });
+  it('should check stats and then damage enemy', function(){
+    let player1 = new Player("jared", "wizard");
+    let enemyWeak = new Enemy("weak");
+    player1.classCheck();
+    player1.playerDamage(enemyWeak);
+    expect(enemyWeak.health).toEqual(90)
+  });
 });
  describe('Enemy' , function(){
    it('should take health away from the player', function(){
@@ -29,3 +36,8 @@ describe('Player' , function(){
      expect(player1.health).toEqual(95);
    });
  })
+ // describe('Endgame', function(){
+ //   it('should check if player health is zero', function(){
+ //     let player1 = new Player("eddy", "wizard");
+ //   })
+ // })
