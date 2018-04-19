@@ -14,6 +14,7 @@ export class Player{
   classCheck(){
     if (this.playerClass === "warrior"){
       this.str += 10;
+      this.inv.push("potion");
     } else if (this.playerClass === "wizard"){
       this.int += 10;
     } else if (this.playerClass === "thief"){
@@ -42,6 +43,12 @@ export class Player{
       return true;
     } else {
       return false;
+    }
+  }
+  potion(){
+    if(this.inv.includes("potion")){
+      this.health += 15;
+      this.inv.splice("potion");
     }
   }
 }

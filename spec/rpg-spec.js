@@ -37,7 +37,14 @@ describe('Player' , function(){
     player1.currentPlayer.push("player");
     player1.turnCheck();
     expect(player1.turnCheck()).toEqual(true);
-  })
+  });
+  it('should add health to player', function(){
+    let player1 = new Player("thisguy", "warrior");
+    player1.classCheck();
+    player1.potion();
+    expect(player1.health).toEqual(115);
+    expect(player1.inv).toEqual([]);
+  });
 });
  describe('Enemy' , function(){
    it('should take health away from the player', function(){
