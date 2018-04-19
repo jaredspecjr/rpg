@@ -1,5 +1,5 @@
-import { Player } from './../src/rpg.js';
-import { Enemy } from './../src/rpg.js';
+import { Player } from './../src/player.js';
+import { Enemy } from './../src/enemy.js';
 
 describe('Player' , function(){
 
@@ -32,6 +32,12 @@ describe('Player' , function(){
     player1.endGameCheck();
     expect(player1.endGameCheck()).toEqual(false);
   });
+  it('should check if current player is player or not', function(){
+    let player1 = new Player("jared", "wizard");
+    player1.currentPlayer.push("player");
+    player1.turnCheck();
+    expect(player1.turnCheck()).toEqual(true);
+  })
 });
  describe('Enemy' , function(){
    it('should take health away from the player', function(){
@@ -41,8 +47,3 @@ describe('Player' , function(){
      expect(player1.health).toEqual(95);
    });
  });
- // describe('Endgame', function(){
- //   it('should check if player health is zero', function(){
- //     let player1 = new Player("eddy", "wizard");
- //   })
- // })

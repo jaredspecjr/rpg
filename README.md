@@ -28,3 +28,7 @@ warrior : str + 10
 wizard : int + 10
 theif : dex + 10
 bard : talent + 10
+
+
+
+check current player should be an array that pushes player on click then gives the ability to attack or use inventory then splices array and pushes enemy when your turn ends.

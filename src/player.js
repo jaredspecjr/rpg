@@ -7,6 +7,8 @@ export class Player{
     this.dex = 10;
     this.int = 10;
     this.tal = 10;
+    this.currentPlayer = [];
+    this.inv = [];
 
   }
   classCheck(){
@@ -25,8 +27,9 @@ export class Player{
       enemy.health -= 10;
     } else {
       enemy.health -=5;
-    }
+    } //add more logic for int dex and tal make sure they are random rolls not fixed numbers
   }
+
   endGameCheck(){
     if(this.health > 0){
       return false;
@@ -34,22 +37,11 @@ export class Player{
       return true;
     }
   }
-}
-
-export class Enemy {
-  constructor(enemyClass){
-    this.enemyClass = enemyClass;
-    this.health = 100;
-  }
-  enemyDamage(player){
-    if (this.enemyClass === "weak"){
-      player.health -= 5;
-    } else if (this.enemyClass === "strong"){
-      player.health -=10;
+  turnCheck(){
+    if(this.currentPlayer.includes("player")){
+      return true;
+    } else {
+      return false;
     }
   }
 }
-
-// export class Endgame {
-//   constructor()
-// }
