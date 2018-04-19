@@ -1,4 +1,4 @@
-export class Enemy {
+class Enemy {
   constructor(enemyClass){
     this.enemyClass = enemyClass;
     this.health = 100;
@@ -11,3 +11,4 @@ export class Enemy {
     }
   }
 }
+export { Enemy };
